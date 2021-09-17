@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo docker pull ubuntu
+
 sudo docker build -t ubuntu:latest .
 
 sudo docker rm -f IPAA
