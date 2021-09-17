@@ -2,7 +2,7 @@
 
 docker exec -it IPAA cd minecraft_server
 
-docker exec -it IPAA wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar
+docker exec -it IPAA wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
 
 docker exec -it IPAA mv server.jar minecraft_server.jar
 
