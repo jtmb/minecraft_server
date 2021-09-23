@@ -10,7 +10,7 @@ docker exec -it minecraft-server java -Xmx4096M -Xms4096M -jar minecraft_server.
 
 docker exec -it minecraft-server cd ..
 
-docker exec -it minecraft-server cp eula.txt /minecraft/minecraft_server
+docker exec -it minecraft-server cp eula.txt /minecraft
 
 docker exec -it minecraft-server java -Xmx4096M -Xms4096M -jar minecraft_server.jar nogui
 
