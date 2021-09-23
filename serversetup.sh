@@ -6,7 +6,7 @@ docker exec -it minecraft-server wget https://launcher.mojang.com/v1/objects/a16
 
 docker exec -it minecraft-server mv server.jar minecraft_server.jar
 
-docker exec -it minecraft-server java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+docker exec -it minecraft-server java -Xmx4096M -Xms4096M -jar minecraft_server.jar nogui
 
 docker exec -it minecraft-server cd ..
 
