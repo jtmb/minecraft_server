@@ -8,5 +8,6 @@ docker exec -it minecraft-server cp /root/minecraft/eulatrue/eula.txt /root/mine
 docker exec -it minecraft-server java -Xmx4096M -Xms4096M -jar minecraft_server.jar nogui
 
 echo SERVER UP
+sudo ufw allow 25565
 
 # COPY eula.txt /root/minecraft/min
