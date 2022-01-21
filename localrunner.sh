@@ -1,3 +1,5 @@
+docker rm =f mc
+
 docker run -d -v /home/james/container-program-files/minecraft-server:/data \
     -e TYPE=PAPER \
     -e MEMORY=4G \
