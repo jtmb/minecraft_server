@@ -1,6 +1,6 @@
 docker rm -f mc
 
-docker run -d -v /home/james/container-program-files/minecraft-server:/data \
+docker run -d -v /home/james/container-program-files/fileserver_share_files/minecraft-server:/data \
     -e TYPE=PAPER \
     -e MEMORY=4G \
     -e MAX_MEMORY=4G \
