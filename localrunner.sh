@@ -4,6 +4,7 @@ docker run -d -v /home/james/container-program-files/fileserver_share_files/mine
     -e TYPE=PAPER \
     -e MEMORY=4G \
     -e MAX_MEMORY=4G \
+    -e INIT_MEMORY=2G \
     -e MOTD="Defeating a sandwitch only makes it tastier." \
     -e EXEC_DIRECTLY=true \
     -e TZ=America/Toronto \
