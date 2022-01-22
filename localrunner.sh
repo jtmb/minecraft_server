@@ -14,7 +14,7 @@ docker run -d -v /home/james/container-program-files/fileserver_share_files/mine
     -p 25565:25565 -e EULA=TRUE --name mc itzg/minecraft-server
     
     
-docker exec mc mc-send-to-console fcp fillvanilla 6 world
+# docker exec mc mc-send-to-console fcp fillvanilla 6 world
 
 
 
