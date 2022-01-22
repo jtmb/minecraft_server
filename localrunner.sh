@@ -4,7 +4,7 @@ docker run -d -v /home/james/container-program-files/fileserver_share_files/mine
     -e TYPE=PAPER \
     -e MEMORY=4G \
     -e MAX_MEMORY=4G \
-    -e MOTD="CICD Minecraft" \
+    -e MOTD="Defeating a sandwitch only makes it tastier." \
     -e EXEC_DIRECTLY=true \
     -e TUNE_VIRTUALIZED=TRUE \
     -e TZ=America/Toronto \
