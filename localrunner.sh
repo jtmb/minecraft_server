@@ -6,6 +6,8 @@ docker run -d -v /home/james/container-program-files/fileserver_share_files/mine
     -e MAX_MEMORY=4G \
     -e INIT_MEMORY=2G \
     -e MOTD="Defeating a sandwitch only makes it tastier." \
+    -e ENABLE_RCON=true \
+    -e RCON_PASSWORD=MyMilkshakeBringsAllTheBoys2DaYard \
     -e EXEC_DIRECTLY=true \
     -e TZ=America/Toronto \
     --cpus="4" \
