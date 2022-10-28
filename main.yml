@@ -14,11 +14,11 @@
   - name: Collect Server IP
     debug:
       msg: "{{ ansible_ssh_host }}"
-
-  - name: Install Required Packages
-    include: tasks/minecraft_server.yml
-
+      
   - name: Install Docker from official signed repo
     when: install_docker == true
     include: tasks/docker.yml
+
+  - name: Install Required Packages
+    include: tasks/minecraft_server.yml
     
