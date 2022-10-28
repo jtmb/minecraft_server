@@ -1,0 +1,27 @@
+- name: Create Minecraft Server container
+  become_user: root
+  become: true
+  docker_container:
+    name: "{{hostname}}"
+    image: "itzg/minecraft-server"
+    pull: yes
+    state: started
+    restart: yes
+    restart_policy: unless-stopped
+    hostname: "{{hostname}}.mcserver"
+    ports: 
+      - "{{ ansible_ssh_host }}:25565:25565/tcp"
+    volumes:
+      - '{{homedir}}container-program-files/fileserver_share_files/minecraft-server:/data'
+    env: 
+        TZ: "{{TZ}}"
+        TYPE: "{{TYPE}}" 
+        MEMORY: "{{MEMORY}}" 
+        MAX_MEMORY: "{{MAX_MEMORY}}" 
+        INIT_MEMORY: "{{INIT_MEMORY}}" 
+        MOTD: "{{MOTD}}" 
+        ENABLE_RCON: "{{ENABLE_RCON}}" 
+        RCON_PASSWORD: "{{RCON_PASSWORD}}" 
+        EXEC_DIRECTLY: "{{EXEC_DIRECTLY}}" 
+        cpus: "{{cpus}}" 
+        EULA: "{{EULA}}"

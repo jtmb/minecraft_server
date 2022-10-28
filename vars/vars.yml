@@ -1,0 +1,35 @@
+
+# ###########################################################################################################################################################
+# #                                                              !!!SET VARS HERE!!!                                                                      # #
+# #   Vars must be set in order for ansible deploy to work. If you are unsure about what these VARS do, search for them in the project and get familiar.  # #
+#############################################################################################################################################################
+
+# IF using ansible vault encrypted secrets, state the secrets in vault.yml
+
+# Linux Vars (mandatory)
+repo_name: "minecraft_server"   #in the event your fork the repo and change the name, update repo name here
+homedir: "/home/{{ssh_user_secret}}"   # Sets home dir to your SSH user, don;t change this unless you know what you are doing.
+ssh_user: "{{ ssh_user_secret }}"   # SSH user name
+ssh_pass: "{{ ssh_pass_secret }}"   # SSH pass you use to connect 
+sudo_pass: "{{ssh_pass_secret}}"    # Define sudo pass (if same as ssh pass, you can always a variable example:  ssh_pass: {{ssh_pass}})
+ssh_port: "{{ ssh_port_secret }}"   # IF running play on server with different SSH port than default 22 or IF running second time - change port here
+ssh_cert: "{{ ssh_cert_secret }}"    # #Point to private file used to connect
+target_server_ip: "{{ target_server_ip_secret }}"
+
+# Dependancy Vars
+install_docker: true
+
+# Minecraft Server Vars
+        TZ: "America/Toronto"
+        TYPE: "PAPER" 
+        MEMORY: "4G" 
+        MAX_MEMORY: "4G" 
+        INIT_MEMORY: "2G" 
+        MOTD: "Defeating a sandwitch only makes it tastier." 
+        ENABLE_RCON: "true" 
+        RCON_PASSWORD: "{{RCON_PASSWORD_SECRET}}" 
+        EXEC_DIRECTLY: "true" 
+        TZ: "America/Toronto" 
+        cpus: "4" 
+        EULA: "TRUE"
+
