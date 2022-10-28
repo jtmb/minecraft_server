@@ -23,5 +23,5 @@
         ENABLE_RCON: "{{ENABLE_RCON}}" 
         RCON_PASSWORD: "{{RCON_PASSWORD}}" 
         EXEC_DIRECTLY: "{{EXEC_DIRECTLY}}" 
-        cpus: "{{cpus}}" 
+        CPUS: "{{CPUS}}" 
         EULA: "{{EULA}}"
