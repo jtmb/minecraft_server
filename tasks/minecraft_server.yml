@@ -10,7 +10,7 @@
     restart_policy: unless-stopped
     hostname: "{{HOSTNAME}}.mcserver"
     ports: 
-      - "{{ ansible_ssh_host }}:25565:25565/tcp"
+      - "{{ ansible_ssh_host }}:{{PORT}}:25565/tcp"
     volumes:
       - '{{homedir}}container-program-files/fileserver_share_files/minecraft-server:/data'
     env: 

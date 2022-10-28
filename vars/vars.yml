@@ -21,6 +21,7 @@ install_docker: false
 
 # Minecraft Server Vars
 HOSTNAME: Minecraft Server
+PORT: "25565"
 TYPE: "PAPER" 
 CPUS: "4" 
 MEMORY: "4G" 
