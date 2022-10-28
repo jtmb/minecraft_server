@@ -25,3 +25,23 @@
         EXEC_DIRECTLY: "{{EXEC_DIRECTLY}}" 
         CPUS: "{{CPUS}}" 
         EULA: "{{EULA}}"
+
+- name: Copy a "bukkit.yml" file from repo to the remote machine
+  copy:
+    src: "./defaults/bukkit.yml"
+    dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/bukkit.yml"
+
+- name: Copy a "paper.yml" file from repo to the remote machine
+  copy:
+    src: "./defaults/paper.yml"
+    dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/paper.yml"
+
+- name: Copy a "server.properties" file from repo to the remote machine
+  copy:
+    src: "./defaults/server.properties"
+    dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/server.properties"
+  
+- name: Copy a "spigot.yml" file from repo to the remote machine
+  copy:
+    src: "./defaults/spigot.yml"
+    dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/spigot.yml"
