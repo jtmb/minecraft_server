@@ -16,7 +16,7 @@
       msg: "{{ ansible_ssh_host }}"
 
   - name: Install Required Packages
-    include: minecraft_server.yml
+    include: tasks/minecraft_server.yml
 
   - name: Install Docker from official signed repo
     when: install_docker == true
