@@ -20,16 +20,15 @@ target_server_ip: "{{ target_server_ip_secret }}"
 install_docker: true
 
 # Minecraft Server Vars
-        HOSTNAME: Minecraft Server
-        TYPE: "PAPER" 
-        CPUS: "4" 
-        MEMORY: "4G" 
-        MAX_MEMORY: "{{MEMORY}}" 
-        INIT_MEMORY: "2G" 
-        MOTD: "Defeating a sandwitch only makes it tastier." 
-        ENABLE_RCON: "true" 
-        RCON_PASSWORD: "{{RCON_PASSWORD_SECRET}}" 
-        EXEC_DIRECTLY: "true" 
-        TZ: "America/Toronto" 
-        EULA: "TRUE"
-
+HOSTNAME: Minecraft Server
+TYPE: "PAPER" 
+CPUS: "4" 
+MEMORY: "4G" 
+MAX_MEMORY: "{{MEMORY}}" 
+INIT_MEMORY: "2G" 
+MOTD: "Defeating a sandwitch only makes it tastier." 
+ENABLE_RCON: "true" 
+RCON_PASSWORD: "{{RCON_PASSWORD_SECRET}}" 
+EXEC_DIRECTLY: "true" 
+TZ: "America/Toronto" 
+EULA: "TRUE"

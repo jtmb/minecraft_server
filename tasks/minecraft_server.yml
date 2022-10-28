@@ -2,13 +2,13 @@
   become_user: root
   become: true
   docker_container:
-    name: "{{hostname}}"
+    name: "{{HOSTNAME}}"
     image: "itzg/minecraft-server"
     pull: yes
     state: started
     restart: yes
     restart_policy: unless-stopped
-    hostname: "{{hostname}}.mcserver"
+    hostname: "{{HOSTNAME}}.mcserver"
     ports: 
       - "{{ ansible_ssh_host }}:25565:25565/tcp"
     volumes:
