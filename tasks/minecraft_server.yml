@@ -45,3 +45,7 @@
   copy:
     src: "./defaults/spigot.yml"
     dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/spigot.yml"
+
+
+- name: Restart Container
+  shell: "sudo docker restart {{HOSTNAME}}"
