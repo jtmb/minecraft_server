@@ -17,7 +17,7 @@ ssh_cert: "{{ssh_cert_secret}}"     #Point to private file used to connect
 target_server_ip: "{{ target_server_ip_secret }}"
 
 # Dependancy Vars
-install_docker: true
+install_docker: false
 
 # Minecraft Server Vars
 HOSTNAME: Minecraft Server
