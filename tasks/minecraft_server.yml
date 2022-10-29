@@ -25,6 +25,8 @@
         EXEC_DIRECTLY: "{{EXEC_DIRECTLY}}" 
         CPUS: "{{CPUS}}" 
         EULA: "{{EULA}}"
+        TUNE_VIRTUALIZED: "TRUE"
+        TUNE_NURSERY_SIZES: "TRUE"
 
 - name: Copy a "bukkit.yml" file from repo to the remote machine
   copy:
