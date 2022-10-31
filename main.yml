@@ -19,6 +19,8 @@
     when: install_docker == true
     include: tasks/docker.yml
 
-  - name: Install Required Packages
+  - name: Install Server
+    tags:
+      - restart_mc_server
     include: tasks/minecraft_server.yml
     
