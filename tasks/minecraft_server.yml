@@ -12,7 +12,7 @@
     ports: 
       - "{{ ansible_ssh_host }}:{{PORT}}:25565/tcp"
     volumes:
-      - '{{homedir}}container-program-files/fileserver_share_files/minecraft-server:/data'
+      - '{{homedir}}/container-program-files/fileserver_share_files/minecraft-server:/data'
     env: 
         TZ: "{{TZ}}"
         TYPE: "{{TYPE}}" 
@@ -51,3 +51,22 @@
 - name: report public ip and save to VAR
   shell: "curl 'https://api.ipify.org'"
   register: public_ip
+
+- name: File Server
+  docker_container:
+    name: "fileserver"
+    image: "filebrowser/filebrowser"
+    pull: yes
+    state: started
+    restart: yes
+    restart_policy: unless-stopped
+    ports: 
+      - "{{ ansible_ssh_host }}:8092:80"
+    volumes:
+      - '{{homedir}}/container-program-files/fileserver_share_files:/srv'
+      - '{{homedir}}/container-program-files/fileserver/database.db:/database.db'
+      - '{{homedir}}/container-program-files/plex/filebrowser.json:/filebrowser.json'
+    env: 
+        TZ: "America/Toronto"
+        ADVERTISE_IP: "http://{{ ansible_ssh_host }}:32400/"
+        VERSION: "docker"
