@@ -1,0 +1,4 @@
+- name: Restart Container
+  tags:
+  - restart_mc_server
+  shell: "sudo docker restart {{HOSTNAME}}"
