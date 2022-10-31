@@ -21,6 +21,11 @@
 
   - name: Install Server
     tags:
+      - mc_server
+    include: tasks/minecraft_server.yml
+
+  - name: Restart MC Server
+    tags:
       - restart_mc_server
     include: tasks/minecraft_server.yml
     

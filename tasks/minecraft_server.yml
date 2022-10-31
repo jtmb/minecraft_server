@@ -48,7 +48,6 @@
     src: "./defaults/spigot.yml"
     dest: "{{homedir}}container-program-files/fileserver_share_files/minecraft-server/spigot.yml"
 
-- name: Restart Container
-  tags:
-  - restart_mc_server
-  shell: "sudo docker restart {{HOSTNAME}}"
+- name: report public ip and save to VAR
+  shell: "curl 'https://api.ipify.org'"
+  register: public_ip
