@@ -28,4 +28,9 @@
     tags:
       - restart_mc_server
     include: tasks/admin_tasks.yml
+
+  - name: Deploy Web Server
+    tags:
+      - deploy_web_server
+    include: tasks/web_server.yml
     
