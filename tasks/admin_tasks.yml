@@ -6,4 +6,4 @@
 - name: Execute RCON
   tags:
   - rcon_cmd
-  shell: "docker exec mc rcon-cli op {{item}}"
+  shell: "docker exec {{HOSTNAME}} rcon-cli op {{item}}"
