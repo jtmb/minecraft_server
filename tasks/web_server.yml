@@ -19,7 +19,7 @@
   ansible.builtin.git:
     repo: https://github.com/jtmb/minecraft-html.git
     dest: '{{homedir}}/container-program-files/ws-mc.branconet.com'
-    version: master
+    version: main
 
 - name: Restart mc.branconet.com
   tags:
