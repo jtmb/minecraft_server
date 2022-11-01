@@ -27,5 +27,5 @@
   - name: Restart MC Server
     tags:
       - restart_mc_server
-    include: tasks/minecraft_server.yml
+    include: tasks/admin_tasks.yml
     
