@@ -7,3 +7,4 @@
   tags:
   - rcon_cmd
   shell: "docker exec {{HOSTNAME}} rcon-cli op {{item}}"
+
