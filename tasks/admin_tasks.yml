@@ -1,0 +1,9 @@
+- name: Restart Container
+  tags:
+  - restart_mc_server
+  shell: "sudo docker restart {{HOSTNAME}}"
+
+- name: Execute RCON
+  tags:
+  - rcon_cmd
+  shell: "docker exec mc rcon-cli op {{item}}"
