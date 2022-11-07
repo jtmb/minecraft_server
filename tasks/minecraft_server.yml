@@ -52,6 +52,13 @@
   shell: "curl 'https://api.ipify.org'"
   register: public_ip
 
+- name: "Provision dirs for file server"
+  ignore_errors: true
+  no_log: true
+  shell: "mkdir {{homedir}}/container-program-files/fileserver/ && \
+          touch {{homedir}}/container-program-files/fileserver/database.db && \
+          touch {{homedir}}/container-program-files/fileserver/filebrowser.json"
+
 - name: File Server
   docker_container:
     name: "fileserver"
