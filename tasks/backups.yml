@@ -27,3 +27,9 @@
   - backup_world
   shell: "cp -r {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}/world_the_end"
   ignore_errors: true
+
+- name: zip backup file to save space
+  archive:
+    path: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}"
+    dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}.zip"
+    format: zip
