@@ -71,7 +71,7 @@
       - "{{ ansible_ssh_host }}:8092:80"
     volumes:
       - '{{homedir}}/container-program-files/fileserver_share_files:/srv'
-      - '{{homedir}}/container-program-files/fileserver/database.db:/database.db'
+      - '{{homedir}}/container-program-files/fileserver/filebrowser.db:/database.db'
       - '{{homedir}}/container-program-files/plex/filebrowser.json:/filebrowser.json'
     env: 
         TZ: "America/Toronto"
