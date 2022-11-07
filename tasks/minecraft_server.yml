@@ -48,6 +48,11 @@
     src: "./defaults/spigot.yml"
     dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/spigot.yml"
 
+- name: Copy a "ops.json" file from repo to the remote machine
+  copy:
+    src: "./defaults/ops.json"
+    dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/ops.json"
+
 - name: report public ip and save to VAR
   shell: "curl 'https://api.ipify.org'"
   register: public_ip
