@@ -22,7 +22,7 @@ install_docker: false
 # Minecraft Server Vars
 HOSTNAME: "mc"
 PORT: "25565"
-TYPE: "FABRIC" 
+TYPE: "PAPER" 
 CPUS: "2" 
 MEMORY: "4G" 
 MAX_MEMORY: "{{MEMORY}}" 
