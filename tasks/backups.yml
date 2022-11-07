@@ -4,6 +4,7 @@
   copy:
     src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world"
     dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world"
+    remote_src: yes
 
 - name: Backup World Nether
   tags:
@@ -11,6 +12,7 @@
   copy:
     src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether"
     dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world_nether"
+    remote_src: yes
 
 - name: Backup World The End
   tags:
@@ -18,3 +20,4 @@
   copy:
     src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether"
     dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world_the_end"
+    remote_src: yes
