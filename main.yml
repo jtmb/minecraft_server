@@ -27,9 +27,14 @@
   - name: Restart MC Server
     tags:
       - restart_mc_server
-    include: tasks/admin_tasks.yml
+    include: tasks/restart_container.yml
 
-  - name: Restart MC Server
+  - name: Rcon CMD
+    tags:
+      - rcon_cmd
+    include: tasks/execute_rcon.yml
+
+  - name: Bacup World
     tags:
       - backup_world
     include: tasks/backups.yml
