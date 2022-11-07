@@ -8,26 +8,5 @@
   - rcon_cmd
   shell: "docker exec {{HOSTNAME}} rcon-cli op {{item}}"
 
-- name: Backup World
-  tags:
-  - backup_world
-  copy:
-    src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world"
-    dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world"
-
-- name: Backup World Nether
-  tags:
-  - backup_world
-  copy:
-    src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether"
-    dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world_nether"
-
-- name: Backup World The End
-  tags:
-  - backup_world
-  copy:
-    src: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether"
-    dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}{{ansible_date_time.time}}/world_the_end"
-
 
 

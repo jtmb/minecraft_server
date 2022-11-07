@@ -27,8 +27,12 @@
   - name: Restart MC Server
     tags:
       - restart_mc_server
-      - backup_world
     include: tasks/admin_tasks.yml
+
+  - name: Restart MC Server
+    tags:
+      - backup_world
+    include: tasks/backups.yml
 
   - name: Deploy Web Server
     tags:
