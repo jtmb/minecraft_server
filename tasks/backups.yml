@@ -33,3 +33,6 @@
     path: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}"
     dest: "{{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}.zip"
     format: zip
+
+- name: Delete Unziped Backup
+  shell: "rm -rfv {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}"
