@@ -1,17 +1,17 @@
 - name: Backup World
   tags:
   - backup_world
-  shell: "cp {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world"
+  shell: "cp -r {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world"
   ignore_errors: true
 
 - name: Backup World Nether
   tags:
   - backup_world
-  shell: "cp {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world_nether"
+  shell: "cp -r {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world_nether"
   ignore_errors: true
 
 - name: Backup World The End
   tags:
   - backup_world
-  shell: "cp {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world_the_end"
+  shell: "cp -r {{homedir}}/container-program-files/fileserver_share_files/minecraft-server/world_nether {{homedir}}/container-program-files/fileserver_share_files/minecraft-server_backups/{{ansible_date_time.date}}:{{ansible_date_time.time}}/world_the_end"
   ignore_errors: true
